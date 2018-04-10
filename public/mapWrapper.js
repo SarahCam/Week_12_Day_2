@@ -22,7 +22,8 @@ MapWrapper.prototype.addMarker = function (coords, info) {
   });
 };
 
-MapWrapper.prototype.gotoGlasgow = function () {
-  console.log("WE ARE GOING TO GLASGOW");
-  this.googleMap.setCenter({lat: 55.8651, lng: -4.258});
+MapWrapper.prototype.gotoCity = function (button, coords) {
+  button.addEventListener('click', function(){
+    this.googleMap.setCenter(coords);
+  }.bind(this));
 };
