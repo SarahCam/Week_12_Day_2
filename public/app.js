@@ -7,10 +7,9 @@ const initialize = function() {
 
   const map = new MapWrapper(container, myHouse, zoom);
 
-  map.addMarker(myHouse);
-  map.addMarker(inverardochMains);
+  map.addMarker(inverardochMains, "Inverardoch Mains");
+  map.addMarker(myHouse, "My House");
 
-  map.showInfoEvent();
 }
 
 window.addEventListener('DOMContentLoaded', initialize);
