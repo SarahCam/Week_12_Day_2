@@ -23,6 +23,13 @@ const initialize = function() {
 
   const whereAmIButton = document.getElementById('button-where-am-i');
   map.gotoCurrentLocation(whereAmIButton);
+
+  const checkLocation = document.getElementById('checkLocation');
+  checkLocation.addEventListener("click", function(position){
+    const myLocation = {lat: position.coords.latitude, lng: position.coords.longitude};
+    map.goToPlace(myLocation);
+  });
+
 }
 
 window.addEventListener('DOMContentLoaded', initialize);
