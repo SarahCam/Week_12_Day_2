@@ -20,6 +20,9 @@ const initialize = function() {
 
   const gotoHomeButton = document.getElementById('button-goto-home');
   map.gotoCity(gotoHomeButton, myHouse);
+
+  const whereAmIButton = document.getElementById('button-where-am-i');
+  map.gotoCurrentLocation(whereAmIButton);
 }
 
 window.addEventListener('DOMContentLoaded', initialize);
